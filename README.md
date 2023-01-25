@@ -23,8 +23,9 @@ Job Salary (DECIMAL)
 
 Job Satisfaction (1-5 (INTEGER))
 
-#Population Algorithm Notes
-My approach to creating a realistic data set:
+# Data Set Creation Algorithm Approach 
+
+Number of entries: 10,000
 
 `University Name`: Random
 
