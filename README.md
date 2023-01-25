@@ -31,10 +31,10 @@ Number of entries: 10,000
 
 `University Program`: Random
 
-`Cumulative GPA`: Random
+`Cumulative GPA`: Random with a normal distribution using the mean of 2.3 and standard deviation of 0.8.
 
-`Num Applications`: range (10-500), higher GPA's will submit less applictions
+`Num Applications`: Random with a normal distribution using the mean of 250 and standard deviation of 100.
 
-`Job Salary`: range ($30,000 - 120,000) with the majority being somewhere in the middle, higher GPA's are slightly more likely to acquire a higher salary     
+`Job Salary`: Random with a normal distribution using the mean of 65,000 and standard deviation of 30,000. GPA will have an effect on this parameter.
 
-`Job Satisfaction`: random
+`Job Satisfaction`: random. GPA will have an affect on this parameter.
