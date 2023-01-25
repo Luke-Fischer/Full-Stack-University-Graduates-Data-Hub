@@ -27,8 +27,13 @@ Job Satisfaction (1-5 (INTEGER))
 My approach to creating a realistic data set:
 
 `University Name`: Random
+
 `University Program`: Random
+
 `Cumulative GPA`: Random
+
 `Num Applications`: range (10-500), higher GPA's will submit less applictions
+
 `Job Salary`: range ($30,000 - 120,000) with the majority being somewhere in the middle, higher GPA's are slightly more likely to acquire a higher salary     
+
 `Job Satisfaction`: random
