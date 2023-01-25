@@ -31,7 +31,7 @@ Number of entries: 10,000
 
 `University Program`: Random
 
-`Cumulative GPA`: Random with a uniform distribution using the mean of 2 and sd of 0.8.
+`Cumulative GPA`: Random with a normal distribution using the mean of 2 and sd of 0.8.
 
 `Num Applications`: range (10-500), higher GPA's will submit less applictions
 
