@@ -1,5 +1,6 @@
 from sql_client import SQLClient
+from data_creator import DataCreator
 
 #Test connection to database - PASSED 
-sql_client = SQLClient()
-sql_client.create_tables()
+data = DataCreator(10)
+data.populate_database()
