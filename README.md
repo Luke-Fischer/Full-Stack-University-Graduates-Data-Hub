@@ -31,9 +31,9 @@ Number of entries: 10,000
 
 `University Program`: Random
 
-`Cumulative GPA`: Random with a normal distribution using the mean of 2 and sd of 0.8.
+`Cumulative GPA`: Random with a normal distribution using the mean of 2.3 and standard deviation of 0.8.
 
-`Num Applications`: range (10-500), higher GPA's will submit less applictions
+`Num Applications`: Random with a normal distribution using the mean of 250 and standard deviation of 100.
 
 `Job Salary`: range ($30,000 - 120,000) with the majority being somewhere in the middle, higher GPA's are slightly more likely to acquire a higher salary     
 
