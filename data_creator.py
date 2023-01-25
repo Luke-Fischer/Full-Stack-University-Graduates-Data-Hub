@@ -22,14 +22,56 @@ class DataCreator:
         university = self.UNI_LIST[(random.randint(0,17))]
         program = self.PROG_LIST[(random.randint(0,27))]
 
-        #Create gpa resembling a standard deviation
-        x = self.control_overflow(random.normal(loc=2.3, scale=0.8, size=(1)))
-        gpa = "{:.1f}".format(x[0])
+        #Create gpa data
+        x_gpa = self.control_overflow(random.normal(loc=2.3, scale=0.8, size=(1)), 0.0, 4.0)
+        gpa = float("{:.1f}".format(float(x_gpa)))
+
+        #Create num applications data
+        x_num_apps = self.control_overflow(random.normal(loc=250, scale=100, size=(1)), 1.0, 1000.0)
+        num_apps = int(x_num_apps)
+
+        #Create salary data
+        x_salary = self.control_overflow(random.normal(loc=60000, scale=20000, size=(1)), 5000.0, 500000.0)
+        salary = int(x_salary)
+        
+        #adjust salary to account for GPA
+        adjusted_salary = self.compute_adjusted_salary(salary, gpa)
+
+        #Job satisfaction
+        job_satisfaction = random.uniform(0.0, 5.0)
+        job_satisfaction += (gpa / 10.0)
+        adjusted_satisfaction = "{:.1f}".format(self.control_overflow(job_satisfaction, 0.0, 5.0))
+
+        #Example user data entry
+        print("University: ", university)
+        print("Program: ", program)
+        print("GPA: ", gpa)
+        print("Number of applications submitted: ", num_apps)
+        print("Salary: ", adjusted_salary)
+        print("Job Satisfaction: ", adjusted_satisfaction)
+
+        #did they get hired, how long after?
+
 
     #Control any possible overflows from the standard deviation
-    def control_overflow(slef, gpa):
-        if(gpa[0] < 0.0):
-            return 0.0
-        if(gpa[0] > 4.0):
-            return 4.0
-        return(gpa)
+    def control_overflow(self, value, min, max):
+        if(value < min):
+            return min
+        if(value > max):
+            return max
+        return(value)
+    
+    def compute_adjusted_salary(self, salary, gpa):
+        if(gpa < 1.0):
+            salary -= int(salary * (float(gpa) / 60.0))
+            return salary
+        elif(gpa < 2.0):
+            salary -= int(salary * (float(gpa) / 100.0))
+            return salary
+        elif(gpa < 3.0):
+            salary += int(salary * (float(gpa) / 100.0))
+            return salary
+        else:
+            salary += int(salary * (float(gpa) / 60.0))
+            return salary
+    
