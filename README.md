@@ -35,6 +35,6 @@ Number of entries: 10,000
 
 `Num Applications`: Random with a normal distribution using the mean of 250 and standard deviation of 100.
 
-`Job Salary`: range ($30,000 - 120,000) with the majority being somewhere in the middle, higher GPA's are slightly more likely to acquire a higher salary     
+`Job Salary`: Random with a normal distribution using the mean of 65,000 and standard deviation of 30,000. GPA will have an effect on this parameter.
 
 `Job Satisfaction`: random
