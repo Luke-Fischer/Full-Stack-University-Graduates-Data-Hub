@@ -37,4 +37,4 @@ Number of entries: 10,000
 
 `Job Salary`: Random with a normal distribution using the mean of 65,000 and standard deviation of 30,000. GPA will have an effect on this parameter.
 
-`Job Satisfaction`: random
+`Job Satisfaction`: random. GPA will have an affect on this parameter.
