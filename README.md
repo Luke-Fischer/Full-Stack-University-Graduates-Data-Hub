@@ -7,11 +7,18 @@ To connect to database (hosted on AWS): psql --host=database-1.c4b1rigueer1.us-e
 
 
 # Database set up (subject to changes)
-Student ID (INTEGER)
+Student ID (INTEGER) 
+
 University Name (VARCHAR)
+
 University Program (VARCHAR)
+
 Cumulative GPA (DECIMAL)
+
 Job Found (TRUE || FALSE)
+
 Num Applications submitted (INTEGER)
+
 Job Salary (DECIMAL)
+
 Job Satisfaction (1-5 (INTEGER))
