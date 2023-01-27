@@ -1,9 +1,10 @@
 import psycopg2
 from psycopg2 import OperationalError
+from data_creator import DataCreator
 
 DATABASE = "psqldb"
 USER = "postgres"
-PASSWORD = "codegod69"
+PASSWORD = "psql_pass"
 HOST = "database-1.c4b1rigueer1.us-east-1.rds.amazonaws.com"
 PORT = 5432
 
@@ -33,7 +34,8 @@ class SQLClient:
                             student_job_found BOOLEAN,
                             student_num_applications INTEGER,
                             student_job_salary INTEGER,
-                            student_job_satisfaction INTEGER
+                            student_job_satisfaction DECIMAL,
+                            student_months_since_grad INTEGER
                         );'''
         try:
             with self.db.cursor() as curs:
@@ -53,3 +55,16 @@ class SQLClient:
             self.db.commit()
         except OperationalError as e:
             print("Error in deleting tables: "'{e}')
+
+    #fill tables
+    def fill_tables(self):
+        data_creator = DataCreator()
+        for i in range (10000):
+            fill_script = data_creator.populate_database(i)
+            try:
+                with self.db.cursor() as curs:
+                    curs.execute(fill_script)
+                self.db.commit()
+            except OperationalError as e:
+                print("Error in filling tables: "'{e}')
+        print("Filling Table: SUCCESS")
