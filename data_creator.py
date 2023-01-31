@@ -3,10 +3,10 @@ from numpy import random
 
 
 class DataCreator:
-    #18 entries
+    #17 entries
     UNI_LIST = ["Brock University", "Carleton University", "Dalhousie University", "Lakehead University", "McGill University", "McMaster University",
                 "Nipissing Univerisity", "Queens University", "University of British Columbia", "Trent University", "University of Alberta", "University of Calgary",
-                "University of Guelph", "Universiy of Manitoba", "University of Toronto", "University of Waterloo", "Wilfrid Laurier University", "York University"]
+                "University of Guelph", "Universiy of Manitoba", "University of Toronto", "University of Waterloo", "Wilfrid Laurier University"]
     
     #28 entries
     PROG_LIST = ["Biology", "Human Nutrition", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Mechanical Engineering", "Chemistry", "Physics",
@@ -56,7 +56,7 @@ class DataCreator:
         
         if(hired == False):
             adjusted_salary = 0
-            job_satisfaction = 0
+            adjusted_satisfaction = 0
 
         #send data to filling algo - explicitly casting
         fill_script = '''INSERT INTO student_info(student_id, student_university, student_program, student_cumulative_gpa, student_job_found, student_num_applications, 
