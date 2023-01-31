@@ -7,6 +7,4 @@ To connect to database (hosted on AWS): psql --host=database-1.c4b1rigueer1.us-e
 
 # Current Status
 
-Database = populated
-
-Checking response times of some example queries (I.e return list of universities student hiring rate from best to worst...etc.)
+Database is populated and back end generic queries are complete. Beginning work on hosting and front-end dev.
