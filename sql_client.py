@@ -124,7 +124,22 @@ class SQLClient:
                 print("Error in query: "'{e}')
 
     #query to return a schools most common major
-    #def most_common_major(self):
-
+    def most_common_major(self):
+        for university in DataCreator.UNI_LIST:
+            max = 0
+            max_prog = ""
+            for program in DataCreator.PROG_LIST:
+                select_script = "SELECT COUNT(*) FROM student_info where student_university = '" + university+ "' and student_program = '" + program + "';"
+                try:
+                    with self.db.cursor() as curs:
+                        curs.execute(select_script)
+                        output = curs.fetchall()
+                        temp = int(output[0][0])
+                        if (temp > max):
+                            max = temp
+                            max_prog = program
+                except OperationalError as e:
+                    print("Error in query: "'{e}')
+            print(university, max_prog)
 
 

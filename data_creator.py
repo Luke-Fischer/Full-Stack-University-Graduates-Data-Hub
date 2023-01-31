@@ -11,7 +11,7 @@ class DataCreator:
     #28 entries
     PROG_LIST = ["Biology", "Human Nutrition", "Chemical Engineering", "Civil Engineering", "Electrical Engineering", "Mechanical Engineering", "Chemistry", "Physics",
                  "Biomedical Science", "Architecture", "Child Studies", "Gender Studies", "Sociology", "Political Science", "Pyschology", "Computer Science", "Environmental Science",
-                 "Finance", "Accounting", "Economics", "Geography", "History", "Human Kinetics", "Computer Engineering", "Studio Art", "Music", "Creative Writing", "Philosophy"]
+                 "Finance", "Accounting", "Economics", "Geography", "History", "Human Kinetics", "Computer Engineering", "Studio Art", "Music", "Creative Writing"]
 
     #Generate data for the database
     def populate_database(self, id):
