@@ -1,6 +1,7 @@
+import os
 import psycopg2
 from psycopg2 import OperationalError
-from data_creator import DataCreator
+from src.data_creator import DataCreator
 
 DATABASE = "psqldb"
 USER = "postgres"
