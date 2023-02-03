@@ -3,6 +3,8 @@ A full-stack web application that holds hypothetical data of Canadian university
 
 Tech Stack: HTML5, CSS, Javascript, js frameworks (TBD), Python, PostgreSQL
 
+Hosting: Heroku
+
 To connect to database (hosted on AWS): psql --host=database-1.c4b1rigueer1.us-east-1.rds.amazonaws.com --port=5432 --username=postgres --password --dbname=psqldb
 
 # Current Status
