@@ -1,7 +1,7 @@
 # University-Graduates-Data-Hub
 A full-stack web application that holds hypothetical data of Canadian university graduates. The goal of this project is to create a platform where (if given real data) post-grad students can gain a better understanding of how they match up to the current job market.
 
-Tech Stack: HTML5, CSS, Javascript, js frameworks (TBD), Python, PostgreSQL
+Tech Stack: HTML5, CSS, React, Python, PostgreSQL
 
 Hosting: Heroku
 
